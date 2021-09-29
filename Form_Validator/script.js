@@ -3,7 +3,8 @@ const username = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
-
+    
+    //show Error or Success messages after input is checked
     function showError(input, message){
         const formControl = input.parentElement;
         formControl.className = 'form-control error';
@@ -15,7 +16,7 @@ const password2 = document.getElementById('password2');
         const formControl = input.parentElement;
         formControl.className = 'form-control success';
     }
-
+    //check valid email
     function checkEmail(input) {
         const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         if(re.test(input.value.trim())){
@@ -25,6 +26,7 @@ const password2 = document.getElementById('password2');
         }
     }
 
+    //check if the field is required
     function checkRequired(inputArr) {
         inputArr.forEach(function (input){
             if(input.value.trim() === ''){
