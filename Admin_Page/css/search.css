@@ -1,0 +1,23 @@
+
+.search-bar {
+    width: 100%;
+}
+
+.search-bar input[type="Text"]:focus{
+    outline: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(28, 192, 184);
+}
+.search-bar input[type="text"]{
+    width: 100%;
+    padding: 10px 17px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin: auto;
+    align-items: center;
+    margin-bottom: 1em;
+    box-shadow: 0 0 20px 0 rgb(0,0,0,0.1);
+    overflow: hidden;
+}
+
+

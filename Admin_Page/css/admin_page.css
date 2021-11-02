@@ -1,0 +1,106 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body *{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    min-width: 200px;
+}
+
+.table {
+    width: 100%;
+}
+
+hr {
+    margin-bottom: 1em;
+    border: 0.3px solid #ddd;
+}
+
+/* Table Styling */
+
+.table-content {
+    border-collapse: collapse;
+    margin: 10px 0;
+    font-size: 0.9em;
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+.table-content thead tr {
+    background-color:rgb(28, 192, 184);
+    color: #fff;
+}
+
+.table-content th, td {
+    padding: 10px 15px;
+    text-align: left;
+}
+
+
+.table-content tr {
+    border-bottom: 1px solid #ddd;
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+
+.table-content tbody tr:hover {
+    background-color: rgb(150, 219, 216);
+    transform: scale(1.0);
+    border-bottom: 1px solid #ddd;
+}
+
+.table-content tbody tr:nth-of-type(even):hover {
+    background-color: rgb(150, 219, 216);
+    transform: scale(1.02);
+    border-bottom: 1px solid #ddd;
+}
+
+.table-content tbody td {
+    color:rgb(14, 66, 65);
+}
+
+.table-content tr:nth-of-type(even) {
+    background-color:rgb(238, 245, 244);
+}
+
+.table-content tbody tr:last-of-type {
+    border-bottom: 3px solid rgb(28, 192, 184);
+}
+
+/*change background color of rows with checkbox selected*/
+.rows-selected {
+    background-color: #ddd !important;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    padding: 50px 0px;
+}
+
+td:nth-child(4){
+    text-transform: capitalize;
+}
+
+a {
+    margin: 0 3px;
+}
+
+@media only screen and (max-width: 400px) {
+    .container, .table-content {
+        width:90%;
+    }
+}

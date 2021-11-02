@@ -1,0 +1,47 @@
+
+
+.table-content button {
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0 0);
+    background-blend-mode: lighten;
+}
+
+.table-content button:hover {
+    background-blend-mode: darken;
+}
+
+.table-content #editEntry button {
+    background-color: rgb(53, 142, 194);
+    border: 1px solid rgb(53, 142, 194);
+    margin-bottom: 2px;
+}
+
+.table-content #deleteEntry button {
+    background-color: orangered;
+    border: 1px solid orangered;
+}
+
+.table-content a{
+    text-decoration: none;
+}
+
+.delete-button button {
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 0px;
+    background-color: rgb(214, 64, 10);
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 500;
+    border:none;
+    background-image:linear-gradient(rgba(0,0,0,0.1) 0 0);
+    background-blend-mode: lighten;
+}
+
+.delete-button button:hover {
+    background-blend-mode: darken;
+}

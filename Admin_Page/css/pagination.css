@@ -1,0 +1,25 @@
+
+#pagination-display button {
+    cursor: pointer;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: 2px solid rgb(28, 192, 184);
+    border-radius: 50%;
+    background-color: rgb(238, 245, 244);
+    color: rgb(26, 155, 148);
+    font-weight: 900;
+}
+
+#pagination-display button:hover {
+    background-color: rgb(28, 192, 184);
+    color: #fff;
+}
+
+#pagination-display button:active {
+    background-color: rgb(28, 192, 184);
+    color: #fff;
+}
+
+.pageSelected {
+    background-color: rgb(28, 192, 184) !important;
+}

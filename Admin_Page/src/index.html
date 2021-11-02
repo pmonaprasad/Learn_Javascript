@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../css/admin_page.css">
+        <link rel="stylesheet" href="../css/delete_user.css">
+        <link rel="stylesheet" href="../css/pagination.css">
+        <link rel="stylesheet" href="../css/search.css">
+
+        <title>
+            Admin
+        </title>
+
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="content">
+                <div class="search-bar">
+                    <form>
+                        <input type="text" id="searchInput" class="border border-secondary"
+                        placeholder="Search by name, email or role">
+                    </form>
+
+                    <hr />
+                </div>
+
+                <div class="row">
+                    <table class="table table-content" id="adminData">
+                        <thead>
+                            <tr class="table-header">
+                                <th><span><input id="main-checkbox" type="checkbox"></span></th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="user-data"></tbody>
+                        
+
+                    </table>
+
+                    <div class="delete-button">
+                        <button id="deleteRow">Delete Selected</button>
+                    </div>
+
+                    <div class="container-fluid mt-5">
+                        <div id="pagination-display">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="module" src="../modules/search.js"></script>
+    <script type="module" src="../modules/pagination.js"></script>
+    <script type="module" src="../modules/search.js"></script>
+    <script type="module" src="../modules/edit_details.js"></script>
+    <script type="module">
+        import {
+            init, addAdminDetails
+        } from "../modules/admin_page.js";
+        var adminDataList = [];
+
+        (async function () {
+            adminDataList = await init();
+            console.log(adminDataList);
+            addAdminDetails(adminDataList);
+
+        })();
+
+
+        import {deleteSelectedRows} from "../modules/delete_user.js";
+
+
+        //Delete Selected Rows
+        document.getElementById("deleteRow").addEventListener("click", function(){
+
+            var tableRef = document.getElementById("user-data");
+            var tableRowsCount = tableRef.rows;
+            var checkedInputs = [];
+
+            for(var i=0; i<tableRowsCount.length; i++){
+
+                var checkboxSelected = tableRowsCount[i].cells[0].children[0].checked;
+
+                if (checkboxSelected) {                  
+                    checkedInputs.push(i);
+            }
+        }
+
+        deleteSelectedRows(checkedInputs);
+    });
+
+    </script>
+              
+    </body>
+</html>
